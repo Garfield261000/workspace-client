@@ -1,9 +1,11 @@
 import React from 'react'
+import {Newdoc, Searchbar} from './'
 
 const Topbar = () => {
   return (
-    <div className='bg-[#c19292] h-16'>
-      <div>Topbar</div>
+    <div className='h-16 flex items-center justify-between p-3'>
+      <Searchbar></Searchbar>
+      <Newdoc></Newdoc>
     </div>
   )
 }

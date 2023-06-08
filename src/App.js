@@ -1,7 +1,8 @@
 import React from 'react'
 import { useState,useEffect } from 'react'
 import { Route,Routes, useNavigate } from 'react-router-dom'
-import {Drafts, Home, Login, Search} from './components'
+import {Collection, Drafts, Home, Login, NewCollection} from './components'
+import { UserProfile } from './components/user'
 import { app } from './config/firebase.config'
 
 import {AnimatePresence} from 'framer-motion'
@@ -50,8 +51,10 @@ const App = () => {
             <Routes>
                 <Route path='/login' element={<Login setAuth={setAuth}/>}/>
                 <Route path='/home' element={<Home/>}/>
-                <Route path='/search' element={<Search/>}/>
                 <Route path='/drafts' element={<Drafts/>}/>
+                <Route path='/userProfile' element={<UserProfile/>}/>
+                <Route path='/collection' element={<Collection/>}/>
+                <Route path='/newcollection' element={<NewCollection/>}/>
             </Routes>
         </div>
     </AnimatePresence>
