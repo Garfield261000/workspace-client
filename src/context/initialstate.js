@@ -2,5 +2,6 @@ export const initialState = {
     user : null,
     allUsers : null,
     collection:'',
-    allCollection:[]
+    allCollection:null,
+    doc:null
 }

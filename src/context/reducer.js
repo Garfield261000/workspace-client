@@ -2,7 +2,8 @@ export const actionType = {
     SET_USER: "SET_USER",
     SET_ALL_USERS: "SET_ALL_USERS",
     SET_COLLECTION: "SET_COLLECTION",
-    SET_ALL_COLLECTION: "SET_ALL_COLLECTION"
+    SET_ALL_COLLECTION: "SET_ALL_COLLECTION",
+    SET_DOC: "SET_DOC"
 
 }
 
@@ -24,12 +25,17 @@ const reducer = (state, action) => {
         case actionType.SET_COLLECTION:
             return {
                 ...state,
-                allUsers: action.collection
+                collection: action.collection
             }
-            case actionType.SET_ALL_COLLECTION:
+        case actionType.SET_ALL_COLLECTION:
             return {
                 ...state,
-                allUsers: action.allCollection
+                allCollection: action.allCollection
+            }
+        case actionType.SET_DOC:
+            return {
+                ...state,
+                doc: action.doc
             }
         default:
             return state;
